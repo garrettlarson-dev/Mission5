@@ -1,0 +1,500 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+:after {
+    content: "";
+}
+
+section {
+    position: relative;
+    left: 100px;
+}
+
+h1 {
+    margin: 20px;
+    font-size: 52px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px #DC143C, 2px 2px 0px #DC143C, 3px 3px 0px #DC143C, 4px 4px 0px #DC143C;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+body {
+    background: lightblue;
+    color: white;
+    max-width: 640px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-smoothing: anti-aliased;
+    overflow-x: hidden;
+}
+
+nav {
+    float: left;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: transparent;
+    padding-top: 50px;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul a {
+    padding: 0 !important;
+}
+
+nav ul li {
+    position: relative;
+    width: 70px;
+    cursor: pointer;
+    background: #ED5565;
+    text-transform: uppercase;
+    transition: all .4s ease-out;
+}
+
+nav ul li:after {
+    position: absolute;
+    background: white;
+    color: #ED5565;
+    top: 0;
+    left: 70px;
+    width: 70px;
+    height: 100%;
+    opacity: .5;
+    transform: perspective(400px) rotateY(90deg);
+    transform-origin: 0 100%;
+    transition: all .4s ease-out;
+}
+
+nav .homeLabel:after {
+    content: "Home";
+    line-height: 88px;
+}
+
+nav .aboutLabel:after {
+    content: "Hobby";
+    line-height: 88px;
+}
+
+nav .calculatorLabel:after {
+    content: "Calc";
+    line-height: 85px;
+}
+
+nav ul li:hover {
+    transform: translateX(-70px);
+}
+
+nav ul li:hover:after {
+    opacity: 1;
+    transform: perspective(400px) rotateY(0deg) scale(1);
+}
+
+
+nav ul li > div {
+    display: inline-block;
+    padding: 25px 0;
+    background: transparent;
+}
+
+nav ul li div {
+    position: relative;
+}
+
+.roof {
+    width: 0;
+    height: 0;
+    top: 2px;
+    border-style: solid;
+    border-width: 0 21px 15px 21px;
+    border-color: transparent transparent #ffffff transparent;
+}
+
+.roof-edge {
+    position: absolute;
+    z-index: 20;
+    left: -17px;
+    top: 3px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 17px 12px 17px;
+    border-color: transparent transparent #ED5565 transparent;
+}
+    /*white triangle over red triangle*/
+    .roof-edge:after {
+        position: absolute;
+        left: -14.5px;
+        top: 3px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 14.5px 10px 14.5px;
+        border-color: transparent transparent white transparent;
+    }
+
+.front {
+    position: relative;
+    top: 3px;
+    width: 28.5px;
+    height: 20px;
+    margin: 0 auto;
+    background: white;
+}
+    /*door*/
+    .front:after {
+        position: absolute;
+        background: #ED5565;
+        width: 11px;
+        height: 13px;
+        bottom: 0;
+        left: 9px;
+    }
+
+/*/// About me ////*/
+
+.head {
+    width: 32px;
+    height: 35px;
+    background: white;
+    border-radius: 8px;
+}
+    /*mouth*/
+    .head:after {
+        width: 4px;
+        height: 10px;
+        background: white;
+        position: absolute;
+        border-radius: 4px 0 0 4px;
+        top: 21px;
+        left: 14px;
+        transform: rotate(270deg);
+    }
+
+.eyes {
+    width: 8px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    background: #ED5565;
+}
+    /*right eye*/
+    .eyes:after {
+        width: 8px;
+        height: 5px;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 14px;
+        background: #ED5565;
+    }
+
+.beard {
+    width: 32px;
+    height: 17px;
+    background: #ED5565;
+    border: 2px solid white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 8px 8px;
+}
+    /*nose*/
+    .beard:after {
+        position: absolute;
+        top: -2px;
+        left: 11px;
+        background: white;
+        width: 6px;
+        height: 4px;
+        border-left: 1px solid #ED5565;
+        border-right: 1px solid #ED5565;
+    }
+
+/*//work//*/
+
+.paper {
+    position: relative;
+    height: 32px;
+    width: 29px;
+    background: white;
+    border: 2px solid white;
+}
+
+    /*window*/
+    .paper:after {
+        position: absolute;
+        top: 1px;
+        left: 0;
+        width: 25px;
+        height: 29px;
+        background: white;
+        border-top: 4px solid #ED5565;
+    }
+
+.lines {
+    position: absolute;
+    top: 36px;
+    left: 5px;
+    width: 11px;
+    box-shadow: 0 0 0 1px #ED5565;
+}
+
+    .lines:after {
+        position: absolute;
+        top: 4px;
+        left: 3px;
+        width: 14px;
+        box-shadow: 0 0 0 1px #ED5565;
+    }
+
+    .lines:nth-child(2) {
+        position: absolute;
+        top: 44px;
+        left: 8px;
+        width: 11px;
+    }
+
+        .lines:nth-child(2):after {
+            position: absolute;
+            top: 4px;
+            left: -3px;
+            width: 11px;
+        }
+
+    .lines:nth-child(3) {
+        position: absolute;
+        top: 52px;
+        left: 8px;
+        width: 14px;
+    }
+
+        .lines:nth-child(3):after {
+            display: none;
+        }
+
+.mainContent {
+    width: 100vw;
+    padding: 20px;
+}
+
+/*//mail //*/
+
+.mail-base {
+    position: relative;
+    width: 32px;
+    height: 18px;
+    background: white;
+}
+
+.mail-top {
+    position: absolute;
+    z-index: 20;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    transform: rotate(180deg);
+    border-style: solid;
+    border-width: 0 16px 11px 16px;
+    border-color: transparent transparent #ED5565 transparent;
+}
+
+    .mail-top:after {
+        position: absolute;
+        z-index: 20;
+        left: -16px;
+        top: 3px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 16px 9px 16px;
+        border-color: transparent transparent white transparent;
+    }
+
+
+.welcomeImg {
+    border-radius: 20px;
+    width: 300px;
+    height: 300px
+}
+
+.footer[b-iamrpe0vu8] {
+    line-height: 10px !important;
+    position: fixed !important;
+}
+
+body .footer {
+    z-index: 1;
+    --footer-background: #ED5565;
+    display: grid;
+    position: relative;
+    grid-area: footer;
+    min-height: 12rem;
+    line-height: 10px;
+}
+
+    body .footer .bubbles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1rem;
+        background: var(--footer-background);
+        filter: url("#blob");
+    }
+
+        body .footer .bubbles .bubble {
+            position: absolute;
+            left: var(--position, 50%);
+            background: var(--footer-background);
+            border-radius: 100%;
+            -webkit-animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+            animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+            transform: translate(-50%, 100%);
+        }
+
+    body .footer .content {
+        z-index: 2;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-gap: 4rem;
+        padding: 2rem;
+        background: var(--footer-background);
+    }
+
+        body .footer .content a, body .footer .content p {
+            color: #F5F7FA;
+            text-decoration: none;
+        }
+
+        body .footer .content b {
+            color: white;
+        }
+
+        body .footer .content p {
+            margin: 0;
+            font-size: 0.75rem;
+        }
+
+        body .footer .content > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+            body .footer .content > div > div {
+                margin: 0.25rem 0;
+            }
+
+                body .footer .content > div > div > * {
+                    margin-right: 0.5rem;
+                }
+
+            body .footer .content > div .image {
+                align-self: center;
+                width: 4rem;
+                height: 4rem;
+                margin: 0.25rem 0;
+                background-size: cover;
+                background-position: center;
+            }
+
+@-webkit-keyframes bubble-size {
+    0%, 75% {
+        width: var(--size, 4rem);
+        height: var(--size, 4rem);
+    }
+
+    100% {
+        width: 0rem;
+        height: 0rem;
+    }
+}
+
+@keyframes bubble-size {
+    0%, 75% {
+        width: var(--size, 4rem);
+        height: var(--size, 4rem);
+    }
+
+    100% {
+        width: 0rem;
+        height: 0rem;
+    }
+}
+
+@-webkit-keyframes bubble-move {
+    0% {
+        bottom: -4rem;
+    }
+
+    100% {
+        bottom: var(--distance, 10rem);
+    }
+}
+
+@keyframes bubble-move {
+    0% {
+        bottom: -4rem;
+    }
+
+    100% {
+        bottom: var(--distance, 10rem);
+    }
+}
+
+.hobby {
+    width: 800px;
+    text-align: left;
+    margin: 30px auto 0px;
+    font-weight: bold;
+}
+
+.calculator-container {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 300px;
+    margin: 0 auto 400px;
+}
+
+#hours-input,
+#rate-display,
+#total-display {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 95%;
+    box-sizing: border-box;
+}
+
+#error-message {
+    color: red;
+    display: none;
+}
+
+button {
+    padding: 10px;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    button:hover {
+        opacity: 0.8;
+    }

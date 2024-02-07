@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Calculator";
+}
+<img class="welcomeImg" src="~/lib/calculator.webp" />
+<h1>@ViewData["Title"]</h1>
+<h2>Here's how much it'll cost you for me to talk your ear off!</h2>
+
+<div class="calculator-container">
+    <input type="number" id="hours-input" placeholder="Enter number of hours" min="1">
+    <span class="error-message" style="display:none;">Please enter a positive number</span>
+    <div>
+        <label for="rate-display">Hourly Rate:</label>
+        <input type="text" id="rate-display" value="999" readonly>
+    </div>
+    <button id="calculate-button">Calculate Total</button>
+    <div>
+        <label for="total-display">Total Cost:</label>
+        <input type="text" id="total-display" readonly>
+    </div>
+    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Back to Home</a>
+</div>
